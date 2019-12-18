@@ -5,6 +5,10 @@ import pickle
 from nltk.corpus import stopwords 
 stopwords = set(stopwords.words('english'))
 
+tfidf_vect_pkl = open('tfidf_vectorizer.pkl','rb')
+tfidf_vect = joblib.load(tfidf_vect_pkl)
+clf_pkl = open('svm_model.pkl','rb')
+clf = joblib.load(clf_pkl)
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,10 +17,7 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    tfidf_vect_pkl = open('tfidf_vectorizer.pkl','rb')
-    tfidf_vect = joblib.load(tfidf_vect_pkl)
-    clf_pkl = open('svm_model.pkl','rb')
-    clf = joblib.load(clf_pkl)
+   
 
     if request.method == 'POST':
         veggies = request.form['veggies']
