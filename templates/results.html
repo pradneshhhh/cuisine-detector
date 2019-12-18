@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+	<div class="container">
+		<div id="brandname">
+			Results
+		</div>
+		<h2>Cuisine Detector Application</h2>
+	</div>
+</header>
+	<p style="color:blue; font-size:20; text-align:center;"><b>Cuisine as per given ingredients</b></p>
+	<!-- <div class="results"> -->
+	</br>
+	<h1 style="color:black; font-size:50; text-align:center;">{{ prediction }}</h1>
+	</br>
+	<form action="/" method="get">
+	<p align="center">
+	<button type="submit" "class="btn-info" formaction="/">Home</button>
+	</p>
+	</form>
+	<!-- </div> -->
+</body>
+</html>

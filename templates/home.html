@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+	<div class="container">
+	<div id="brandname">
+		Cuisine Detector Application
+</header>
+<div class="ml-container">
+	<form action="{{ url_for('predict')}}" method="POST">
+	</br>
+	<p>Enter your ingredients, followed by a space</p>
+	</br>
+	<h3>Veggies:<h3>
+	<h6>onion,garlic,tomato,potato,carrot,bell pepper,basil,parsley,broccoli,etc</h6>
+	<textarea name="veggies" rows="3" cols="30"></textarea>
+	<br/>
+	<h3>Grains:<h3>
+	<h6>rice,pasta,flour,bread,bread crumbs,corn starch,oats,noodle,flour,tortillas,pancake mix,yeast,brown rice,etc</h6>
+	<textarea name="grains" rows="3" cols="30"></textarea>
+	<br/>
+	<h3>Spices:<h3>
+	<h6>clove,garam masala,turmeric,cinnamon,garlic powder,paprika,oregano,chili powder,red pepper flake,cumin,onion powder,etc</h6>
+	<textarea name="spices" rows="3" cols="30"></textarea>
+	<br/>
+	<h3>Oils:<h3>
+	<h6>olive oil,vegetable oil,cooking spray,canola oil,sesame oil,coconut oil,peanut oil,sunflower oil</h6>
+	<textarea name="oils" rows="3" cols="30"></textarea>
+	<br/>
+	<h3>Meats:<h3>
+	<h6>chicken breast,beef,bacon sausage,steak,ham,hot dog,chicken thighs,turkey,canned tuna,salmon,pomfret,prawns,shrimp,crabcs,etc</h6>
+	<textarea name="meats" rows="3" cols="30"></textarea>
+	<br/>
+	<h3>Dairy:<h3>
+	<h6>butter,egg,milk,cheese,yogurt,cream,ghee,mozzarella,etc</h6>
+	<textarea name="dairy" rows="3" cols="30"></textarea>
+	<h3>Extras:<h3>
+	<h6>salt,ginger,sesame seed,chili sauce,soya sauce,apple cider,ketchup,mayonise,pesto,tomato sauce,etc</h6>
+	<textarea name="extras" rows="3" cols="30"></textarea>
+	</br>
+	<input type="submit" class="btn-info" value="Think">		
+</form>
+	
+</div>
+
+</html>
