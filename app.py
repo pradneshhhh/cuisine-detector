@@ -10,8 +10,8 @@ stopwords = ['ourselves', 'hers', 'between', 'yourself', 'but', 'again', 'there'
 #tfidf_vect = joblib.load(tfidf_vect_pkl)
 #clf_pkl = open('svm_model.pkl','rb')
 #clf = joblib.load(clf_pkl)
-#tfidf_vect = pickle.load(open('tfidf_vectorizer.pkl','rb'))
-#clf = pickle.load(open('svm_model.pkl','rb'))
+tfidf_vect = pickle.load(open('tfidf_vectorizer.pkl','rb'))
+clf = pickle.load(open('svm_model.pkl','rb'))
 app = Flask(__name__)
 
 @app.route('/')
@@ -20,10 +20,10 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    tfidf_vect_pkl = open('tfidf_vectorizer.pkl','rb')
-    tfidf_vect = joblib.load(tfidf_vect_pkl)
-    clf_pkl = open('svm_model.pkl','rb')
-    clf = joblib.load(clf_pkl)
+    #tfidf_vect_pkl = open('tfidf_vectorizer.pkl','rb')
+    #tfidf_vect = joblib.load(tfidf_vect_pkl)
+    #clf_pkl = open('svm_model.pkl','rb')
+    #clf = joblib.load(clf_pkl)
     if request.method == 'POST':
         veggies = request.form['veggies']
         grains = request.form['grains']
