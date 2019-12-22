@@ -1,6 +1,6 @@
 from flask import Flask,render_template,url_for,request
-from sklearn.externals import joblib
-#import joblib
+#from sklearn.externals import joblib
+import joblib
 import pickle
 #from nltk.corpus import stopwords 
 #stopwords = set(stopwords.words('english'))
