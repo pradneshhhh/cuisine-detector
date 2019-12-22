@@ -51,4 +51,4 @@ def predict():
     return render_template('results.html',prediction = clf_prediction[0])
     
 if __name__ == '__main__':
-	app.run()
+	app.run(debug=True)
