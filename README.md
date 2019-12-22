@@ -10,8 +10,9 @@ This web application takes input as ingredients and applies machine learning alg
   
   -Web Framework: flask
   
-  -Deployment: Heroku(PAAS) 
-  #link- https://cuisine-detector.herokuapp.com/
+  -Deployment: Heroku(PAAS)
+  
+  # link- https://cuisine-detector.herokuapp.com/
   
   
 
